@@ -9,7 +9,7 @@ use App\Http\Controllers\QueueController;
 Route::get('/test-db', function () {
     try {
         DB::connection()->getPdo();
-        return "✅ Database terkoneksi: " . DB::connection()->getDatabaseName();
+        return "Database terkoneksi: " . DB::connection()->getDatabaseName();
     } catch (\Exception $e) {
         return "Gagal koneksi database: " . $e->getMessage();
     }
