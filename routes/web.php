@@ -11,7 +11,7 @@ Route::get('/test-db', function () {
         DB::connection()->getPdo();
         return "✅ Database terkoneksi: " . DB::connection()->getDatabaseName();
     } catch (\Exception $e) {
-        return "❌ Gagal koneksi database: " . $e->getMessage();
+        return "Gagal koneksi database: " . $e->getMessage();
     }
 });
 
